@@ -28,8 +28,8 @@ if __name__ == "__main__":
     print(factorize(128, 255, 99999, 10651060))
     print(in_parallel(128, 255, 99999, 10651060))
 
-    x = print("Синхронно", measurement_time(128, 255, 99999, 10651060))
+    print("Синхронно", measurement_time(128, 255, 99999, 10651060))
 
     start = time()
     in_parallel(128, 255, 99999, 10651060)
-    y = print("Паралельно:", time() - start)
+    print("Паралельно:", time() - start)
