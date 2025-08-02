@@ -24,7 +24,7 @@ def copy_file(file):
 
         shutil.move(str(file), str(append_folder))
         
-sourse_dir =r"D:\Users\Admin\Desktop\dist"
+sourse_dir =Path("dist")
 all_files = zbir_file(sourse_dir)
 with ThreadPoolExecutor(max_workers=5) as executor:
     executor.map(copy_file,all_files)
